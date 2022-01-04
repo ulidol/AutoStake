@@ -210,7 +210,7 @@ class BS:
         time.sleep(3)
         try:
             self.driver.find_element_by_xpath(
-                f"//div[div/div[contains(text(),'{crypto}')]]/div/div[5]"
+                f"//div[div/div[contains(text(),'{crypto}')]]//button[text()='Stake Now']"
             ).click()
             time.sleep(3)
             self.driver.find_element_by_xpath(
@@ -226,7 +226,7 @@ class BS:
             ).get_attribute("value"))
             time.sleep(3)
             self.driver.find_element_by_xpath(
-                "//div[div[contains(text(),'I have read and I agree')]]/label/div[input[@type='checkbox']]"
+                f"//label[@class='css-bfef9a']/div[input[@type='checkbox']]"
             ).click()
             time.sleep(3)
             self.driver.find_element_by_xpath(
